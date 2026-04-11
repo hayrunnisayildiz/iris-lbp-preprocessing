@@ -27,7 +27,7 @@ arguments
     refSzIn = []
 end
 
-n = imdsPP.NumFiles;
+n = irisDatastoreNumFiles(imdsPP);
 if n == 0
     featMat = zeros(0, 0);
     labelVec = categorical([]);
@@ -35,7 +35,7 @@ if n == 0
     return
 end
 
-I1 = readimage(imdsPP, 1);
+I1 = readPreprocessedIrisImage(imdsPP, 1);
 I1 = toGray2d(I1);
 if isempty(refSzIn)
     refSzUsed = size(I1);
@@ -58,7 +58,7 @@ labelVec = imdsPP.Labels;
 featMat(1, :) = feat1(:).';
 
 for i = 2:n
-    I = readimage(imdsPP, i);
+    I = readPreprocessedIrisImage(imdsPP, i);
     I = toGray2d(I);
     if ~isequal(size(I), refSz)
         % --- Rapor notu: boyut normalizasyonu ---

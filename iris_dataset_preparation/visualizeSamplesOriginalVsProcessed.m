@@ -17,8 +17,9 @@ arguments
     numSamples (1,1) double {mustBeInteger, mustBePositive} = 4
 end
 
-n = min(numSamples, imds.NumFiles);
-idx = randperm(imds.NumFiles, n);
+nFiles = irisDatastoreNumFiles(imds);
+n = min(numSamples, nFiles);
+idx = randperm(nFiles, n);
 
 figure('Name', 'Iris veri seti: orijinal vs. ön işleme', 'Color', 'w');
 
