@@ -1,0 +1,14 @@
+# MATLAB
+*.asv
+*.m~
+*.slxc
+slprj/
+sccprj/
+*.autosave
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Veri seti (büyük / kişisel — isterseniz kaldırıp PNG'leri de ekleyebilirsiniz)
+iris_images/
