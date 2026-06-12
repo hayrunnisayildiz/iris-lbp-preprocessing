@@ -24,7 +24,7 @@ if ~isequal(size(I1), refSzUsed)
     I1 = imresize(I1, refSzUsed);
 end
 refSz = refSzUsed;
-feat1 = extractLBPFeatures(I1);
+feat1 = my_extractLBPFeatures(I1);
 d = numel(feat1);
 featMat = zeros(n, d, 'like', feat1);
 labelVec = imdsPP.Labels;
@@ -35,7 +35,7 @@ for i = 2:n
     if ~isequal(size(I), refSz)
         I = imresize(I, refSz);
     end
-    f = extractLBPFeatures(I);
+    f = my_extractLBPFeatures(I);
     featMat(i, :) = f(:).';
 end
 end
