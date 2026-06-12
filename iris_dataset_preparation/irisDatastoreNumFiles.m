@@ -1,8 +1,4 @@
 function n = irisDatastoreNumFiles(ds)
-%IRISDATASTORENUMFILES imageDatastore / transform sonrası datastore dosya sayısı.
-%
-%   Eski MATLAB sürümlerinde ImageDatastore.NumFiles yoktur; numel(Files) kullanılır.
-%   transform(...) ile sarılmış datastore için alt datastore özyinelemeli okunur.
 
 n = [];
 if isprop(ds, 'NumFiles')

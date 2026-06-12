@@ -1,16 +1,4 @@
 function visualizeSamplesOriginalVsProcessed(imds, numSamples)
-%VISUALIZESAMPLESORIGINALVSPROCESSED Etiketli datastore'dan rastgele örnekleri karşılaştırır.
-%
-%   visualizeSamplesOriginalVsProcessed(imds)
-%   visualizeSamplesOriginalVsProcessed(imds, numSamples)
-%
-%   imds      : ön işlemsiz (ham okuma) imageDatastore.
-%   numSamples: gösterilecek örnek sayısı (varsayılan 4).
-
-% --- Rapor maddesi (2. Veri Seti Hazırlama): görselleştirme ---
-% Ön işlemin etkisini nesnel olarak yorumlayabilmek için aynı görüntünün ham
-% (RGB griye indirgenmiş gösterim) ve işlenmiş hali yan yana sunulur; CLAHE sonrası
-% lokal kontrast artışının iris dokusuna yansıması doğrudan gözlemlenebilir.
 
 arguments
     imds

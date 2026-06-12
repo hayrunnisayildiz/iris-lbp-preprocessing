@@ -1,8 +1,4 @@
 function I = readPreprocessedIrisImage(imdsPP, k)
-%READPREPROCESSEDIRISIMAGE Ön işlemeli görüntüyü okur (tüm MATLAB sürümleri / datastore tipleri).
-%
-%   Yeni sürümlerde readimage(transform(ds)) desteklenir; eskilerde alt imageDatastore
-%   üzerinden readimage / imread + preprocessIrisImage ile aynı çıktı üretilir.
 
 try
     I = readimage(imdsPP, k);
